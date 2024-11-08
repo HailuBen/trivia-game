@@ -1,0 +1,153 @@
+/* Josh's Custom CSS Reset https://www.joshwcomeau.com/css/custom-css-reset/ */
+*,::before,::after{box-sizing:border-box}*{margin:0}body{line-height:1.5;-webkit-font-smoothing:antialiased}img,picture,video,canvas,svg{display:block;max-width:100%}input,button,textarea,select{font:inherit}p,h1,h2,h3,h4,h5,h6{overflow-wrap:break-word}#root,#__next{isolation:isolate}
+html,body{height: 100%; margin: 0;}
+body{
+    /* background-color: #231645;
+    background: rgb(209,121,17);
+    background: -moz-radial-gradient(circle, rgba(209,121,17,0.5009336498271184) 0%, rgba(102,40,136,0.6465919131324405) 75%, rgba(33,0,155,0.548552697446166) 100%);
+    background: -webkit-radial-gradient(circle, rgba(209,121,17,0.5009336498271184) 0%, rgba(102,40,136,0.6465919131324405) 75%, rgba(33,0,155,0.548552697446166) 100%);
+    background: radial-gradient(circle, rgba(209,121,17,0.5009336498271184) 0%, rgba(102,40,136,0.6465919131324405) 75%, rgba(33,0,155,0.548552697446166) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d17911",endColorstr="#21009b",GradientType=1);  
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    background-image: url(img/poketriviab1213g.png);
+    background-color: #9074c4;
+    background-color: #1e1430;
+    background-color: #bca2ed;
+    box-shadow: inset 0px 0px 50px 50px #503d74;
+    box-shadow: inset 0px 0px 100px 100px #9074c4;
+
+    /* box-shadow: inset 0px 0px 10px 10px #9074c4; */
+    /* background: radial-gradient(circle, #454687 0%, #9074c4 50%, #66288882 70%, #53318d6d 100%); */
+    width: 100%;
+    /* margin: 0 10em; */
+    color: white;
+    font-family: arial;
+}
+header{
+
+}
+article{
+
+}
+article.info-text{
+    text-align: center;
+}
+article.info-text h3{
+    font-size: 1.5em;
+}
+div.img-container{
+    display: flex;
+    justify-content: center;
+    /* height: 100%; */
+}
+img.poketrivia{
+    width: 50%; /* Change this value to increase the size */
+    max-width: 700px; /* Add a max-width if desired */
+    height: auto;
+}
+main{
+    background-color: #3a39496f;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2em 0 5em 0;
+    margin: 0 20em;
+    box-shadow: inset 0px 0px 30px 10px #503d74;
+    box-shadow: inset 0px 0px 10px 10px #9074c4;
+    border-radius: 1em;
+    background: radial-gradient(circle, #454687 0%, #9074c4 50%, #66288882 70%, #53318d6d 100%);
+}
+
+.game-container {  
+    display: grid;
+    /* grid-template-columns: .5fr 1fr .5fr; */
+    grid-template-rows: .5fr .5fr;
+    justify-content: center;
+    align-items: center;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "timer-container logo-container score-container"
+      "question-container question-container question-container"
+      "sound-container answer-container .";
+  }
+  
+.sound-container { grid-area: sound-container; }
+.score-container { grid-area: score-container; }
+.logo-container { grid-area: logo-container; }
+.question-container { grid-area: question-container; } 
+.answer-container { grid-area: answer-container;} 
+.timer-container {grid-area: timer-container;}
+.score-container, .score-container, .logo-container, .timer-container{
+    justify-self: center;
+    font-size: 1.5em;
+    /* padding-bottom: 1em; */
+}
+
+.question-container{
+    background-color: #231645;
+    /* box-shadow: inset 0px 0px 20px 20px #5926b8; */
+    box-shadow: 0px 0px 20px 5px #2d1260;
+    border-radius: 2em;
+    padding: 1em;
+    margin: 1.5em 0;
+    text-align: center;
+    justify-self: center;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas:
+      ". question-heading ."
+      ". question ."
+      "answer-a . answer-b"
+      "answer-c . answer-d"; */
+}
+.question-heading{grid-area: question-heading;}
+.question{grid-area: question;}
+
+.question{
+    font-size: 1.5em;
+}
+
+.answer-container{
+    text-align: center;
+}
+
+.answer-container > button{
+    
+}
+
+/* .answer-a{grid-area: answer-a;}
+.answer-b{grid-area: answer-b;}
+.answer-c{grid-area: answer-c;}
+.answer-d{grid-area: answer-d;} */
+
+.answer {
+    text-align: left;
+}    
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1em;
+}
+footer a{
+    color: #00bbff;
+    text-decoration: none;
+    font-weight: 800;
+    text-decoration: underline;
+    transition: .5s;
+    -webkit-text-decoration-color: transparent;
+    -moz-text-decoration-color: transparent;
+    text-decoration-color: transparent;
+}
+footer a:hover{
+    text-decoration: underline;
+    -webkit-text-decoration-color: #e100ff;
+    -moz-text-decoration-color: #e100ff;
+    text-decoration-color: #e100ff;
+    font-size: 20px;
+}
