@@ -13,9 +13,30 @@
         //  else if the user has selected the correct answer, highlight their answer as GREEN
         //  (Do not highlight the correct answer in the incorrect case, this will make the user want to attempt the quiz again) 
 
-
+// Import the questions object from questions.js file
+import { questions } from './questions.js'
 
 const questionContainerElement = document.querySelector('.question-container');
 const questionElement = document.querySelector('.question');
-const answerButtonsElement = document.querySelector('.answer-button');
-const nextButton = document.getElementById('next-btn');
+const answerButtons = document.querySelectorAll('.answer-button');
+let counter=0;
+
+function loadQuestion(){
+    //Variable to hold random question based on questions in questions.js array object
+    const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+    //Update question class to hold random questions
+    questionElement.textContent = randomQuestion.question;
+    //Sort the answers in a random/shuffled order
+    const shuffledAnswers = randomQuestion.answers.sort(() => Math.random() - 0.5);
+
+    //Sets each shuffled button answer 
+    answerButtons.forEach((button, index) => { 
+        const answerSpan = button.querySelector('.answer-span'); answerSpan.textContent = shuffledAnswers[index].text;
+        button.addEventListener('click', () => { 
+            const isCorrect = shuffledAnswers[index].correct; 
+            console.log(answerSpan.textContent + ": " + isCorrect);
+        }); 
+    });
+}
+loadQuestion();
+
