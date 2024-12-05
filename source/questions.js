@@ -1,4 +1,4 @@
-const questions = [
+export const questions = [
     { 
         question: "Ash Ketchum, the protagonist from the Pokémon series hails from this small Kanto town",
         answers: [
@@ -62,7 +62,7 @@ const questions = [
     },
 
     { 
-        question: "This Pokémon type often associated with pink colored Pokémon, is super effective against Dragon-types",
+        question: "This Pokémon type often associated with the colour pink, is super effective against Dragon-types",
         answers: [
             {text: "Psychic", correct:false},
             {text: "Fairy", correct:true},
@@ -82,7 +82,7 @@ const questions = [
         difficulty:"easy"
     },
     { 
-        question: "Cyrus, the blue-haired leader of Team Galactic, seeks to create a new world using the powers of these two Legendary Pokémon",
+        question: "Cyrus, the cold and calculated leader of Team Galactic seeks to create a new world using the powers of these two Legendary Pokémon",
         answers: [
             {text: "Lugia and Ho-Oh", correct:false},
             {text: "Reshiram and Zekrom", correct:false},
@@ -142,7 +142,7 @@ const questions = [
         difficulty:"intermediate"
     },
     { 
-        question: "In the Pokémon anime's Johto League arc, while facing off against his new friend Harrison, Ash's Charizard famously lost to this Pokémon",
+        question: "In the Pokémon anime's Johto League arc, while facing off against his new friend Harrison, Ash's Charizard lost to this Pokémon",
         answers: [
             {text: "Sceptile", correct:false},
             {text: "Blaziken", correct:true},
@@ -202,42 +202,42 @@ const questions = [
         difficulty:"intermediate"
     },
     { 
-        question: "Which of the following Generation III Pokémon cannot learn the HM05 Flash?",
+        question: "This Generation III Pokémon is unable to learn HM05 Flash",
         answers: [
             {text: "Sceptile", correct:false},
             {text: "Spinda", correct:true},
             {text: "Breloom", correct:false},
             {text: "Linoone", correct:false},
         ],
-        difficulty:"Hard"
+        difficulty:"hard"
     },
     { 
-        question: "This Pokémon type often associated with the color pink, is super effective against Dragon-types.",
+        question: "One of these Pokémon was NOT reworked into the newly introduced fairy typing in Generation 6",
         answers: [
-            {text: "Psychic", correct:false},
-            {text: "Fairy", correct:true},
-            {text: "Ground", correct:false},
-            {text: "Fire", correct:false},
+            {text: "Mime Jr.", correct:false},
+            {text: "Togepi", correct:false},
+            {text: "Audino", correct:true},
+            {text: "Azurill", correct:false},
         ],
-        difficulty:"easy"
+        difficulty:"intermediate"
     },
     { 
-        question: "This Pokémon type often associated with the color pink, is super effective against Dragon-types.",
+        question: "The Painter Pokémon Smeargle's signature move Sketch allows it to copy most other moves. It is unable to sketch one of the following",
         answers: [
-            {text: "Psychic", correct:false},
-            {text: "Fairy", correct:true},
-            {text: "Ground", correct:false},
-            {text: "Fire", correct:false},
+            {text: "Hyper Beam", correct:false},
+            {text: "Chatter", correct:true},
+            {text: "Spacial Rend", correct:false},
+            {text: "Substitute", correct:false},
         ],
-        difficulty:"easy"
+        difficulty:"hard"
     },
     { 
-        question: "This Pokémon type often associated with the color pink, is super effective against Dragon-types.",
+        question: "To acquire the Pokétch device in the Gen 4 Diamond & Pearl games, the player must talk to this number and type of NPCs around Jubilife City.",
         answers: [
-            {text: "Psychic", correct:false},
-            {text: "Fairy", correct:true},
-            {text: "Ground", correct:false},
-            {text: "Fire", correct:false},
+            {text: "1 Professor", correct:false},
+            {text: "2 Gym Leaders", correct:false},
+            {text: "5 Grunts", correct:false},
+            {text: "3 Clowns", correct:true},
         ],
         difficulty:"easy"
     },
