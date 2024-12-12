@@ -32,7 +32,7 @@ body{
     background-color: #1e1430;
     background-color: #bca2ed;
     box-shadow: inset 0px 0px 50px 50px #503d74;
-    box-shadow: inset 0px 0px 100px 100px #9074c4;
+    /* box-shadow: inset 0px 0px 100px 100px #9074c4; */
 
     /* box-shadow: inset 0px 0px 10px 10px #9074c4; */
     /* background: radial-gradient(circle, #454687 0%, #9074c4 50%, #66288882 70%, #53318d6d 100%); */
@@ -81,24 +81,42 @@ main{
     padding: 2em 0 5em 0;
     margin: 0 10%;
     box-shadow: inset 0px 0px 30px 10px #503d74;
-    box-shadow: inset 0px 0px 10px 10px #9074c4;
+    box-shadow: inset 0px 0px 2em 1em #9074c4;
     border-radius: 1em;
     background: radial-gradient(circle, #454687 0%, #9074c4 50%, #66288882 70%, #53318d6d 100%);
 }
 
 .game-container {  
     display: grid;
+    /* width: 25vh; */
+    /* height: 50vh; */
+    /* justify-self: center; */
     /* grid-template-columns: .5fr 1fr .5fr; */
+    padding: 0 2em;
     grid-template-rows: .5fr .5fr;
     justify-content: center;
     align-items: center;
-    gap: 0px 0px;
+    gap: 0;
     grid-auto-flow: row;
     grid-template-areas:
       "timer-container logo-container score-container"
-      "question-container question-container question-container"
-      "sound-container answer-container .";
+      ". question-container sound-container"
+      ". answer-container .";
   }
+
+  .score-container{
+    display: flex;
+    align-items: center;
+    font-size: 0.5em;
+  }
+  .pokedollar-sign{
+    filter: invert(100%);
+  }
+
+  .sound-icon,.pokedollar-sign,.clock-icon{
+    width: 5vh;
+  }
+  
   
 .sound-container { grid-area: sound-container; }
 .score-container { grid-area: score-container; }
@@ -114,12 +132,14 @@ main{
 
 .question-container{
     background-color: #231645;
-    /* box-shadow: inset 0px 0px 20px 20px #5926b8; */
-    box-shadow: 0px 0px 20px 5px #2d1260;
+    background: #2d1260;
+    background: linear-gradient(90deg, rgba(74,25,117,1) 0%, rgba(97,82,154,1) 25%, rgba(144,116,196,0.8532754166119573) 50%, rgba(97,82,154,1) 75%, rgba(74,25,117,1) 100%);
+    box-shadow: 0px 0px 20px 5px #341260;
     border-radius: 2em;
     padding: 1em;
-    margin: 1.5em 0;
-    width: 75%;
+    margin: 1.5em 1em;
+    /* width: 75%; */
+    width: 100vh;
     text-align: center;
     justify-self: center;
     font-family: PokemonClassic;
@@ -137,10 +157,10 @@ main{
 .question{grid-area: question;}
 
 .question{
-    padding: 1em;
+    padding: 4vh;
     font-size: 1em;
     font-weight: 700;
-    word-spacing: -2px;
+    word-spacing: 4px;
 }
 
 .answer-container{
@@ -149,6 +169,8 @@ main{
     text-align: center;
     justify-content: center;
     gap: 2em;
+    width: 100vh;
+
 }
 
 .answer-container > button{
@@ -161,13 +183,13 @@ main{
     background-color: #fff;
     transition: .3s ease;
     border-radius: 2em;
-    padding: 1.5vh;
+    padding: 2vh;
     border: none;
     box-shadow: 2px 2px 8px #1e1430;
 }
 .answer-button:hover{
     background-color: #facb34;
-    box-shadow: 5px 5px 5px #305290;
+    box-shadow: 0 0 0.5em 0.5em #305290;
 }
 
 /* .answer-a{grid-area: answer-a;}
