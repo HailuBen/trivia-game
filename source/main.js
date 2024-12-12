@@ -28,6 +28,8 @@ function loadQuestion(){
     questionElement.textContent = randomQuestion.question;
     //Sort the answers in a random/shuffled order
     const shuffledAnswers = randomQuestion.answers.sort(() => Math.random() - 0.5);
+    //Declare variable to hold correct/incorrect result
+
 
     //Sets each shuffled button answer 
     answerButtons.forEach((button, index) => { 
@@ -35,8 +37,22 @@ function loadQuestion(){
         button.addEventListener('click', () => { 
             const isCorrect = shuffledAnswers[index].correct; 
             console.log(answerSpan.textContent + ": " + isCorrect);
+            if (isCorrect){
+                startGame();
+            }else{
+                resetGame();
+            }
         }); 
     });
 }
 loadQuestion();
+
+function resetGame(){
+    alert("Incorrect.");
+}
+
+function startGame(){
+    alert("Correct!");
+    // Start counting score/money, start timer, etc.
+}
 
